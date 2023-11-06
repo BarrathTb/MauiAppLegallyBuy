@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppLegallyBuy.MainPage">
+
+    <StackLayout BackgroundColor="#F8F8F8">
+        <Frame BackgroundColor="#212121" CornerRadius="20" Margin="20" HasShadow="True">
+            <Label Text="Are You Old Enough to Drink?" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <StackLayout Spacing="15">
+            <Frame BackgroundColor="#333333" CornerRadius="10" HasShadow="True" Margin="20">
+                <Entry x:Name="AgeEntry" Placeholder="Enter your age" Style="{StaticResource DarkEntryStyle}" FontSize="16"/>
+            </Frame>
+
+            <Button Grid.Column="0" Text="Calculate" Clicked="CalculateButton_Clicked" BackgroundColor="#212121" TextColor="White" FontSize="20" CornerRadius="10" Margin="20" />
+        </StackLayout>
+
+        <Label x:Name="ResultLabel" TextColor="Black" FontSize="24" HorizontalTextAlignment="Center" Margin="20"/>
+
+        <Frame BackgroundColor="White" CornerRadius="10" HasShadow="True" Margin="20">
+            <Picker x:Name="CountryPicker"
+        Title="Select a Country"
+        Style="{StaticResource DarkPickerStyle}"
+        FontSize="16"
+        Margin="20">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>United States</x:String>
+                        <x:String>Canada</x:String>
+                        <x:String>United Kingdom</x:String>
+                        <x:String>Australia</x:String>
+                        <x:String>New Zealand</x:String>
+                        <x:String>Germany</x:String>
+                        <x:String>France</x:String>
+                        <x:String>Italy</x:String>
+                        <x:String>Spain</x:String>
+                        <x:String>Japan</x:String>
+                        <x:String>South Korea</x:String>
+                        <x:String>China</x:String>
+                        <x:String>India</x:String>
+                        <x:String>Brazil</x:String>
+                        <x:String>Mexico</x:String>
+                        <x:String>Argentina</x:String>
+                        <x:String>Russia</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+        </Frame>
+    </StackLayout>
+
+</ContentPage>
